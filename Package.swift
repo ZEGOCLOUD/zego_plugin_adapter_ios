@@ -18,6 +18,6 @@ let package = Package(
     ],
     
     targets: [
-        .target(name: "ZegoPluginAdapter", path: "./ZegoPluginAdapter")
+        .target(name: "ZegoPluginAdapter", path: "ZegoPluginAdapter")
     ]
 )

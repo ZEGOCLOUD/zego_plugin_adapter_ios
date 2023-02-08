@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint ZegoPluginAdapter.podspec' to ensure this is a
+#  Be sure to run `pod spec lint ZegoUIKitPrebuiltCall.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -16,18 +16,18 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoPluginAdapter"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of ZegoPluginAdapter."
+  spec.version      = "2.0.0"
+  spec.summary      = "ZegoPluginAdapter iOS SDK"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  spec.description  = "ZegoPluginAdapter SDK for iOS by ZEGO."
 
-  spec.homepage     = "http://EXAMPLE/ZegoPluginAdapter"
+  spec.homepage     = "https://www.zegocloud.com"
+  spec.documentation_url = "https://docs.zegocloud.com"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +38,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # spec.license      = "MIT (example)"
+  spec.license      = { :type => "Copyright", :text => "Copyright © 2022-2024 ZEGO. All Rights Reserved.\n" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "careyxi" => "careyxi@zego.im" }
+  spec.author             = { "ZEGOCLOUND" => "zego.im" }
   # Or just: spec.author    = "careyxi"
   # spec.authors            = { "careyxi" => "careyxi@zego.im" }
   # spec.social_media_url   = "https://twitter.com/careyxi"
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "12.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/ZegoPluginAdapter.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "", :tag => "#{spec.version.to_s}"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files =  "ZegoPluginAdapter","ZegoPluginAdapter/**/*.{swift}"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -105,9 +105,10 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-
+  # spec.resources = "ZegoUIKitPrebuiltCall/Resource/Call/**/*.png"
+  # create  ZegoUIKitPrebuiltCall_bundle
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
+
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -129,9 +130,7 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
-
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  spec.requires_arc = true
+  spec.swift_versions = ['5.0']
 
 end
