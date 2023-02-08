@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint ZegoUIKitPrebuiltCall.podspec' to ensure this is a
+#  Be sure to run `pod spec lint ZegoPluginAdapter.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -27,7 +27,6 @@ Pod::Spec.new do |spec|
   spec.description  = "ZegoPluginAdapter SDK for iOS by ZEGO."
 
   spec.homepage     = "https://www.zegocloud.com"
-  spec.documentation_url = "https://docs.zegocloud.com"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +37,6 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # spec.license      = "MIT (example)"
   spec.license      = { :type => "Copyright", :text => "Copyright © 2022-2024 ZEGO. All Rights Reserved.\n" }
 
 
@@ -53,9 +51,6 @@ Pod::Spec.new do |spec|
   #
 
   spec.author             = { "ZEGOCLOUND" => "zego.im" }
-  # Or just: spec.author    = "careyxi"
-  # spec.authors            = { "careyxi" => "careyxi@zego.im" }
-  # spec.social_media_url   = "https://twitter.com/careyxi"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -63,14 +58,12 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  spec.platform     = :ios, "12.0"
-
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
+  spec.platform     = :ios, "12.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +72,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "", :tag => "#{spec.version.to_s}"}
+  spec.source       = { :git => "https://github.com/ZEGOCLOUD/zego_plugin_adapter_ios.git", :tag => "#{spec.version.to_s}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +84,6 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files =  "ZegoPluginAdapter","ZegoPluginAdapter/**/*.{swift}"
-  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -105,10 +97,9 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  # spec.resources = "ZegoUIKitPrebuiltCall/Resource/Call/**/*.png"
-  # create  ZegoUIKitPrebuiltCall_bundle
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  # spec.resources = "Resources/*.png"
 
+  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,5 +123,8 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true
   spec.swift_versions = ['5.0']
+
+  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  # spec.dependency "JSONKit", "~> 1.4"
 
 end
