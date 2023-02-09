@@ -6,8 +6,6 @@ import PackageDescription
 let package = Package(
     name: "ZegoPluginAdapter",
     
-    platforms: [.iOS(.v12)],
-    
     products: [
         .library(name: "ZegoPluginAdapter", targets: ["ZegoPluginAdapter"])
     ],
@@ -18,6 +16,6 @@ let package = Package(
     ],
     
     targets: [
-        .target(name: "ZegoPluginAdapter", path: "ZegoPluginAdapter")
+        .binaryTarget(name: "ZegoPluginAdapter", url: "https://github.com/ZEGOCLOUD/zego_plugin_adapter_ios/releases/download/2.0.0/ZegoPluginAdapter.xcframework.zip", checksum: "5753f1bcf229580c289acc99201d9a7ed2421d02885df87792a8852cef46418a")
     ]
 )
