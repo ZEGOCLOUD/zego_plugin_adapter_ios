@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZegoPluginAdapter
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
@@ -75,7 +75,7 @@ public protocol ZegoSignalingPluginProtocol : ZegoPluginAdapter.ZegoPluginProtoc
   func sendRoomMessage(_ text: Swift.String, roomID: Swift.String, callback: ZegoPluginAdapter.SendRoomMessageCallback?)
   func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Swift.Bool, isSandboxEnvironment: Swift.Bool)
   func setRemoteNotificationsDeviceToken(_ deviceToken: Foundation.Data)
-  func registerPluginEventHandler(_ delegate: ZegoPluginAdapter.ZegoSignalingPluginEventHandler)
+  func registerPluginEventHandler(_ delegate: any ZegoPluginAdapter.ZegoSignalingPluginEventHandler)
 }
 @objc public protocol ZegoSignalingPluginEventHandler {
   @objc func onConnectionStateChanged(_ state: ZegoPluginAdapter.ZegoSignalingPluginConnectionState)
@@ -93,7 +93,7 @@ public protocol ZegoSignalingPluginProtocol : ZegoPluginAdapter.ZegoPluginProtoc
   @objc func onInRoomTextMessageReceived(_ messages: [ZegoPluginAdapter.ZegoSignalingInRoomTextMessage], roomID: Swift.String)
 }
 public protocol ZegoPluginProvider {
-  func getPlugin() -> ZegoPluginAdapter.ZegoPluginProtocol?
+  func getPlugin() -> (any ZegoPluginAdapter.ZegoPluginProtocol)?
 }
 public struct ZegoSignalingProvider {
 }
@@ -103,8 +103,8 @@ public protocol ZegoPluginProtocol {
 }
 @_hasMissingDesignatedInitializers public class ZegoPluginAdapter {
   public static let shared: ZegoPluginAdapter.ZegoPluginAdapter
-  public static func installPlugins(_ plugins: [ZegoPluginAdapter.ZegoPluginProtocol])
-  public static var signalingPlugin: ZegoPluginAdapter.ZegoSignalingPluginProtocol? {
+  public static func installPlugins(_ plugins: [any ZegoPluginAdapter.ZegoPluginProtocol])
+  public static var signalingPlugin: (any ZegoPluginAdapter.ZegoSignalingPluginProtocol)? {
     get
   }
   @objc deinit
