@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/ZegoPluginAdapter-Swift.h</key>
 		<data>
-		Oba77nwLEx0bWFAqQMGIAjo/+4E=
+		vhdWWo5FAPCibp+Qq87mL9KquE8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uyUjPz5YSKgTruLy2mxPR6jt4GU=
+		0Y+8GxQuDzvgpR6arlKQz+e2OOM=
 		</data>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		XfZa/MHDA2nYM7RRmxvBB/FbRHE=
+		2ZRpO2CWErMFJyM+LJIVamN9Axc=
 		</data>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		XZ9wgfceHzP1+19c50ki1xMEMDU=
+		Fgz6SS2iwfxajFClwP3SzEaDnas=
 		</data>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Uv5JIHs/ngPsP5N9S6ZUIcAcb+8=
+		Gpflnr+CuZZfER0Or4pNofQ9OEg=
 		</data>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		XZ9wgfceHzP1+19c50ki1xMEMDU=
+		Fgz6SS2iwfxajFClwP3SzEaDnas=
 		</data>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		X7XLecXjlQZsRoqW8qJd4ynulh0=
+		XFgZ6q/ryBJH/k2WqOy517uYxKs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,14 +47,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1iotzTC5xfwsAbhv3Dn4MxqTP69axDRp+Kwbj/yzrN8=
+			PErbjHKkX+B+KbwG/Vms4FOGoXbrSyU313KDBCoxwZ8=
 			</data>
 		</dict>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cH5FcTCncNUN6EZzGCjUSO/JOPScD4ABzSV7O+HaozA=
+			6+FvVBqkWSTO0ea2B86h05/xqtTh33hmspRWrIXd01E=
 			</data>
 		</dict>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -68,28 +68,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fb6Ee482Nosiyzx+nDx4i/Gt9GFpAzotgTPVEUcO+pM=
+			9HcNh3HNvgwGyhQbgqggD7vxQcFFh/QiP5hKzGTOsKk=
 			</data>
 		</dict>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p2S39g0UKIL8K3wm+tIbPpQVeE5CCk5HpPAvQTEoA3w=
+			IwBUqQuGwPUOptxNJ+OTMScXN38ha4iaDK0fC69DPTQ=
 			</data>
 		</dict>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fb6Ee482Nosiyzx+nDx4i/Gt9GFpAzotgTPVEUcO+pM=
+			9HcNh3HNvgwGyhQbgqggD7vxQcFFh/QiP5hKzGTOsKk=
 			</data>
 		</dict>
 		<key>Modules/ZegoPluginAdapter.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NReINUzmdpHYgyGw+DmBrCeRTaDEJTokgmP2EjBNsIg=
+			tl1PdtuRgCvUDmBRgGauUq0ickBr0a7BO0zAi40QVoo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
