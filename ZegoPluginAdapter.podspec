@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoPluginAdapter"
-  spec.version      = "2.0.4"
+  spec.version      = "2.1.0"
   spec.summary      = "ZegoPluginAdapter iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -84,6 +84,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.public_header_files = "Classes/**/*.h"
+  spec.source_files =  "ZegoPluginAdapter","ZegoPluginAdapter/**/*.{swift}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -111,6 +112,9 @@ Pod::Spec.new do |spec|
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
+  spec.pod_target_xcconfig = {
+    'PRODUCT_BUNDLE_IDENTIFIER' => 'com.zegocloud.pluginadapter'
+  }
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -118,12 +122,12 @@ Pod::Spec.new do |spec|
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
+  
 
   spec.requires_arc = true
   spec.swift_versions = ['5.0']
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-  spec.vendored_frameworks = 'ZegoPluginAdapter.xcframework'
 
 end

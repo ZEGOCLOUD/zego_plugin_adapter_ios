@@ -1,4 +1,0 @@
-framework module ZegoPluginAdapter {
-  header "ZegoPluginAdapter-Swift.h"
-  requires objc
-}
