@@ -74,6 +74,8 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     
     func sendRoomMessage(_ text: String, roomID: String, callback: SendRoomMessageCallback?)
     
+    func sendRoomCommand(_ command: String, roomID: String, callback: SendRoomMessageCallback?)
+    
     func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Bool,
                                                       isSandboxEnvironment: Bool)
     
@@ -124,5 +126,7 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     func onRoomMemberJoined(_ userIDList: [String], roomID: String)
     
     func onInRoomTextMessageReceived(_ messages: [ZegoSignalingInRoomTextMessage],
+                                         roomID: String)
+    func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage],
                                          roomID: String)
 }

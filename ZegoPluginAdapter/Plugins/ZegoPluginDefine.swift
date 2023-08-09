@@ -82,6 +82,26 @@ public class ZegoSignalingInRoomTextMessage: NSObject {
     }
 }
 
+public class ZegoSignalingInRoomCommandMessage: NSObject {
+    public var messageID: Int64 = 0
+    public var timestamp: UInt64 = 0
+    public var orderKey: Int64 = 0
+    public var senderUserID: String = ""
+    public var command: String = ""
+    
+    public init(messageID: Int64,
+                timestamp: UInt64,
+                orderKey: Int64,
+                senderUserID: String,
+                command: String) {
+        self.messageID = messageID
+        self.timestamp = timestamp
+        self.orderKey = orderKey
+        self.senderUserID = senderUserID
+        self.command = command
+    }
+}
+
 public class ZegoSignalingPluginNotificationConfig: NSObject {
     public let resourceID: String
     public let title: String
