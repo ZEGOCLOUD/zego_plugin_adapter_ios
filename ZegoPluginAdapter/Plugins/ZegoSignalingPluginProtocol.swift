@@ -77,7 +77,8 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     func sendRoomCommand(_ command: String, roomID: String, callback: SendRoomMessageCallback?)
     
     func enableNotifyWhenAppRunningInBackgroundOrQuit(_ enable: Bool,
-                                                      isSandboxEnvironment: Bool)
+                                                      isSandboxEnvironment: Bool,
+                                                      certificateIndex: ZegoSignalingPluginMultiCertificate)
     
     func setRemoteNotificationsDeviceToken(_ deviceToken: Data)
     

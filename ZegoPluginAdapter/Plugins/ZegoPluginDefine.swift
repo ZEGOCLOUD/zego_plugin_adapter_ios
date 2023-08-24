@@ -113,3 +113,8 @@ public class ZegoSignalingPluginNotificationConfig: NSObject {
         self.message = message
     }
 }
+
+@objc public enum ZegoSignalingPluginMultiCertificate: UInt32 {
+    case firstCertificate = 1
+    case secondCertificate = 2
+}
