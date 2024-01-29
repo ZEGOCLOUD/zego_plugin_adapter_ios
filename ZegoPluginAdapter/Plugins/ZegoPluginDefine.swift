@@ -118,3 +118,24 @@ public class ZegoSignalingPluginNotificationConfig: NSObject {
     case firstCertificate = 1
     case secondCertificate = 2
 }
+
+public class CallKitAction: NSObject {
+    
+    public let fulfillAction: () -> ()
+    public let failAction: () -> ()
+    
+    public init(_ fulfillAction: @escaping () -> (), failAction: @escaping () -> ()) {
+        self.fulfillAction = fulfillAction
+        self.failAction = failAction
+    }
+    
+    /// Report successful execution of the receiver.
+    public func fulfill() {
+        fulfillAction()
+    }
+
+    /// Report failed execution of the receiver.
+    public func fail() {
+        failAction()
+    }
+}
