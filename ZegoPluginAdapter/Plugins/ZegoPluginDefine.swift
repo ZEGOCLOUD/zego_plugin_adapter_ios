@@ -53,6 +53,7 @@ public typealias SendRoomMessageCallback = (_ errorCode: UInt, _ errorMessage: S
 
 public enum ZegoPluginType: Int {
     case signaling
+    case callkit
 }
 
 @objc public enum ZegoSignalingPluginConnectionState: UInt {

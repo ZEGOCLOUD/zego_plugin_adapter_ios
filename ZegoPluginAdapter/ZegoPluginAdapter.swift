@@ -21,6 +21,10 @@ public class ZegoPluginAdapter {
     public static var signalingPlugin: ZegoSignalingPluginProtocol? {
         return getPlugin(.signaling) as? ZegoSignalingPluginProtocol
     }
+
+    public static var callkitPlugin: ZegoCallKitPluginProtocol? {
+        return getPlugin(.callkit) as? ZegoCallKitPluginProtocol
+    }
     
     private static func getPlugin(_ type: ZegoPluginType) -> ZegoPluginProtocol? {
         // get plugin from ZegoPluginAdapter
@@ -43,6 +47,8 @@ public class ZegoPluginAdapter {
         switch type {
         case .signaling:
             return ZegoSignalingProvider() as? ZegoPluginProvider
+        case .callkit:
+            return ZegoCallKitProvider() as? ZegoPluginProvider
         }
     }
 }

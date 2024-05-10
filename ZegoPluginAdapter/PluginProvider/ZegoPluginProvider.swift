@@ -14,3 +14,7 @@ public protocol ZegoPluginProvider {
 public struct ZegoSignalingProvider {
 
 }
+
+public struct ZegoCallKitProvider {
+
+}

@@ -84,14 +84,9 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     
     func registerPluginEventHandler(_ delegate: ZegoSignalingPluginEventHandler)
     
-    // MARK: CallKit
-    func reportIncomingCall(with uuid: UUID, title: String, hasVideo: Bool)
+    // MARK: for AppleCallKit
+    func setVoipToken(_ token: Data, isSandboxEnvironment: Bool)
     
-    func reportCallEnded(with uuid: UUID, reason: Int)
-    
-    func endCall(with uuid: UUID)
-    
-    func endAllCalls()
 }
 
 @objc public protocol ZegoSignalingPluginEventHandler: AnyObject {
@@ -139,22 +134,5 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     func onInRoomCommandMessageReceived(_ messages: [ZegoSignalingInRoomCommandMessage],
                                          roomID: String)
     
-    // MARK: CallKit
-    func didReceiveIncomingPush(_ uuid: UUID, invitationID: String, data: String)
     
-    func onCallKitStartCall(_ action: CallKitAction)
-    
-    func onCallKitAnswerCall(_ action: CallKitAction)
-    
-    func onCallKitEndCall(_ action: CallKitAction)
-    
-    func onCallKitSetHeldCall(_ action: CallKitAction)
-    
-    func onCallKitSetMutedCall(_ action: CallKitAction)
-    
-    func onCallKitSetGroupCall(_ action: CallKitAction)
-    
-    func onCallKitPlayDTMFCall(_ action: CallKitAction)
-    
-    func onCallKitTimeOutPerforming(_ action: CallKitAction)
 }
