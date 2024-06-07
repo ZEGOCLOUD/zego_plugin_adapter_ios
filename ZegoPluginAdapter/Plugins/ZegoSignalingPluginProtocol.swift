@@ -91,7 +91,11 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
 
 @objc public protocol ZegoSignalingPluginEventHandler: AnyObject {
     func onConnectionStateChanged(_ state: ZegoSignalingPluginConnectionState)
-    
+  
+    func onIMRoomStateChanged(_ state:Int,
+                              event:Int,
+                              roomID:String)
+  
     func onTokenWillExpire(in second: UInt32)
     
     // MARK: - Invitation
