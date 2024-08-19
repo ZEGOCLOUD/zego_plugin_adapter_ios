@@ -50,10 +50,13 @@ public typealias QueryRoomPropertyCallback = (_ errorCode: UInt,
 
 public typealias SendRoomMessageCallback = (_ errorCode: UInt, _ errorMessage: String) -> ()
 
+public typealias ZegoPluginCallback = (_ data: Dictionary<String, AnyObject>?) -> ()
+
 
 public enum ZegoPluginType: Int {
     case signaling
     case callkit
+    case call
 }
 
 @objc public enum ZegoSignalingPluginConnectionState: UInt {
@@ -61,6 +64,12 @@ public enum ZegoPluginType: Int {
     case connecting
     case connected
     case reconnecting
+}
+
+
+@objc public enum ZegoPluginCallType: Int {
+  case voiceCall = 0
+  case videoCall = 1
 }
 
 public class ZegoSignalingInRoomTextMessage: NSObject {
@@ -80,6 +89,32 @@ public class ZegoSignalingInRoomTextMessage: NSObject {
         self.orderKey = orderKey
         self.senderUserID = senderUserID
         self.text = text
+    }
+}
+
+@objc public class ZegoPluginCallUser: NSObject {
+    
+  @objc public var userID: String = ""
+  @objc public var userName: String = ""
+  @objc public var avatar: String = ""
+    
+  @objc public init(userID: String,
+                userName: String,
+                    avatar: String? = nil) {
+        self.userID = userID
+        self.userName = userName
+        self.avatar = avatar ?? ""
+    }
+}
+
+public class ZegoCallPluginConfig {
+    public var invitationConfig: AnyObject
+    public var resourceID: String = ""
+    
+    public init(invitationConfig: AnyObject,
+                resourceID: String) {
+        self.invitationConfig = invitationConfig
+        self.resourceID = resourceID
     }
 }
 
@@ -103,15 +138,16 @@ public class ZegoSignalingInRoomCommandMessage: NSObject {
     }
 }
 
+@objcMembers
 public class ZegoSignalingPluginNotificationConfig: NSObject {
     public let resourceID: String
-    public let title: String
-    public let message: String
+    public var title: String
+    public var message: String
     
-    public init(resourceID: String, title: String, message: String) {
+    public init(resourceID: String, title: String? = nil, message: String? = nil) {
         self.resourceID = resourceID
-        self.title = title
-        self.message = message
+        self.title = title ?? ""
+        self.message = message ?? ""
     }
 }
 
@@ -134,7 +170,7 @@ public class CallKitAction: NSObject {
     public func fulfill() {
         fulfillAction()
     }
-
+    
     /// Report failed execution of the receiver.
     public func fail() {
         failAction()

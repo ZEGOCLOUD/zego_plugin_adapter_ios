@@ -18,3 +18,7 @@ public struct ZegoSignalingProvider {
 public struct ZegoCallKitProvider {
 
 }
+
+public struct ZegoUIKitPrebuiteCallProvider {
+
+}

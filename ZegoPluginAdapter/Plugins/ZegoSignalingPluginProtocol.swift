@@ -140,3 +140,21 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     
     
 }
+
+public protocol ZegoCallPluginProtocol: ZegoPluginProtocol {
+  
+  func initWith(appID: UInt32, appSign: String, userID: String, userName: String, callPluginConfig: ZegoCallPluginConfig)
+
+  func initWith(appID: UInt32, appSign: String, userID: String, userName: String)
+
+  func unInit()
+
+  func logoutUser()
+
+  func sendInvitationWithUIChange( invitees:[ZegoPluginCallUser],invitationType: ZegoPluginCallType,
+                                   customData: String, timeout: Int, notificationConfig: ZegoSignalingPluginNotificationConfig,
+                                   callback: ZegoPluginCallback?)
+  
+  func registerCallKitDelegate(delegate: AnyObject)
+  
+}
