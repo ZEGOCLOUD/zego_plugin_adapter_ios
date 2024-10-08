@@ -107,11 +107,11 @@ public class ZegoSignalingInRoomTextMessage: NSObject {
     }
 }
 
-public class ZegoCallPluginConfig {
-    public var invitationConfig: AnyObject
-    public var resourceID: String = ""
+@objc public class ZegoCallPluginConfig : NSObject {
+    @objc public var invitationConfig: AnyObject
+    @objc public var resourceID: String = ""
     
-    public init(invitationConfig: AnyObject,
+    @objc public init(invitationConfig: AnyObject,
                 resourceID: String) {
         self.invitationConfig = invitationConfig
         self.resourceID = resourceID

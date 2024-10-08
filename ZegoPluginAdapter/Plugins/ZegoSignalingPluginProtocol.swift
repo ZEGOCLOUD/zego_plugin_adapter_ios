@@ -151,8 +151,11 @@ public protocol ZegoCallPluginProtocol: ZegoPluginProtocol {
 
   func logoutUser()
 
-  func sendInvitationWithUIChange( invitees:[ZegoPluginCallUser],invitationType: ZegoPluginCallType,
-                                   customData: String, timeout: Int, notificationConfig: ZegoSignalingPluginNotificationConfig,
+  func sendInvitationWithUIChange( invitees:[ZegoPluginCallUser],
+                                   invitationType: ZegoPluginCallType,
+                                   customData: String,
+                                   timeout: Int,
+                                   notificationConfig: ZegoSignalingPluginNotificationConfig,
                                    callback: ZegoPluginCallback?)
   
   func registerCallKitDelegate(delegate: AnyObject)
