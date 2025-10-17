@@ -13,8 +13,8 @@ public protocol ZegoCallKitPluginProtocol: ZegoPluginProtocol {
     // MARK: CallKit
     
     // 开启 voip, 并传入环境
-    func enableVoIP(_ isSandboxEnvironment: Bool)
-    
+    func enableVoIP(isSandboxEnvironment: Bool)
+
     // 注册 CallKit 的回调
     func registerPluginEventHandler(_ delegate: ZegoCallKitPluginEventHandler)
     
