@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoPluginAdapter"
-  spec.version      = "2.5.4"
+  spec.version      = "2.5.5"
   spec.summary      = "ZegoPluginAdapter iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -65,6 +65,9 @@ Pod::Spec.new do |spec|
   # spec.tvos.deployment_target = "9.0"
   spec.platform     = :ios, "13.0"
 
+  spec.info_plist = {
+    'CFBundleDisplayVersion' => "#{spec.version.to_s}",
+  }
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

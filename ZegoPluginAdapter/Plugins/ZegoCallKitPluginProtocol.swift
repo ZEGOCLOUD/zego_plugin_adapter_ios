@@ -18,9 +18,11 @@ public protocol ZegoCallKitPluginProtocol: ZegoPluginProtocol {
     // 注册 CallKit 的回调
     func registerPluginEventHandler(_ delegate: ZegoCallKitPluginEventHandler)
     
-    
+    @available(*, deprecated, message: "Use reportIncomingCall(uuid, title, hasVideo, identifier) instead")
     func reportIncomingCall(with uuid: UUID, title: String, hasVideo: Bool)
     
+    func reportIncomingCall(with uuid: UUID, title: String, hasVideo: Bool, identifier: String)
+
     func reportCallEnded(with uuid: UUID, reason: Int)
     
     
