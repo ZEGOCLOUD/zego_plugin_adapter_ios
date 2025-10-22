@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ZIM
 
 public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     
@@ -83,6 +84,8 @@ public protocol ZegoSignalingPluginProtocol: ZegoPluginProtocol {
     func setRemoteNotificationsDeviceToken(_ deviceToken: Data)
     
     func registerPluginEventHandler(_ delegate: ZegoSignalingPluginEventHandler)
+    
+    func registerZIMEventHandler(_ handler: ZIMEventHandler)
     
     // MARK: for AppleCallKit
     func setVoipToken(_ token: Data, isSandboxEnvironment: Bool)
