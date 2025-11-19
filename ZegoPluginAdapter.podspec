@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZegoPluginAdapter"
-  spec.version      = "2.6.0"
+  spec.version      = "2.6.1"
   spec.summary      = "ZegoPluginAdapter iOS SDK"
 
   # This description is used to generate tags and improve search results.
@@ -37,7 +37,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = { :type => "Copyright", :text => "Copyright © 2022-2024 ZEGO. All Rights Reserved.\n" }
+  spec.license      = { :type => "Copyright", :text => "Copyright © 2015-2025 ZEGO. All Rights Reserved.\n" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "ZEGOCLOUND" => "zego.im" }
+  spec.author             = { "ZEGOCLOUD" => "zego.im" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -63,7 +63,7 @@ Pod::Spec.new do |spec|
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
-  spec.platform     = :ios, "13.0"
+  spec.platform     = :ios, "12.0"
 
   spec.info_plist = {
     'CFBundleDisplayVersion' => "#{spec.version.to_s}",
@@ -131,6 +131,5 @@ Pod::Spec.new do |spec|
   spec.swift_versions = ['5.0']
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
 
 end
